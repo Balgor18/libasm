@@ -1,2 +1,10 @@
 Link video https://www.youtube.com/watch?v=22UPjfgyRzI
 https://elearning.intra.42.fr/notions/libftasm/subnotions/libftasm-libftasm/videos/libftasm-979
+
+
+https://personal.denison.edu/~bressoud/cs281-s07/Assembler.pdf
+
+https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-and-user-space-f
+
+https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf
+https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master
