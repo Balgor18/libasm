@@ -12,7 +12,8 @@ ifeq ($(DEBUG), 1)
 	CXXFLAGS += -g3
 endif
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.s=%.o))
-SRCS = ft_strlen.s
+SRCS =	ft_strlen.s \
+		ft_write.s
 
 SRC_TEST = main.c
 OBJS_TEST = $(addprefix $(OBJ_DIR)/, $(SRC_TEST:%.c=%.o))
