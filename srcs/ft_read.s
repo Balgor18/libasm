@@ -1,15 +1,17 @@
-;    ssize_t     write(int fildes, const void *buf, size_t nbyte);
+;     ssize_t	read(int fildes, void *buf, size_t nbyte);
 ;    - fildes is store inside the register [RDI]
 ;    - buf is store inside the register [RSI]
-;    - byte is store inside the register [RDX]
+;    - nbyte is store inside the register [RDX]
 
-global _ft_write
+global _ft_read
 %define MACH_SYSCALL(nb)   0x2000000 | nb ; Use for mac os
+%define STDIN 0
 %define STDOUT 1
+%define READ 3
 %define WRITE 4
 
-_ft_write:
-	mov		rax, MACH_SYSCALL(WRITE); Check for a linux system
+_ft_read:
+	mov		rax, MACH_SYSCALL(READ) ; Check for a linux system
 	mov		rbx, rdx
 	syscall
 	cmp		rax, 0
