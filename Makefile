@@ -13,7 +13,8 @@ ifeq ($(DEBUG), 1)
 endif
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.s=%.o))
 SRCS =	ft_strlen.s \
-		ft_write.s
+		ft_write.s \
+		ft_read.s
 
 SRC_TEST = main.c
 OBJS_TEST = $(addprefix $(OBJ_DIR)/, $(SRC_TEST:%.c=%.o))
