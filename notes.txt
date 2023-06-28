@@ -8,3 +8,11 @@ https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for
 
 https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf
 https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master
+
+Default https://www.gladir.com/CODER/ASM8086/index.htm
+
+Mot cle 
+https://www.gladir.com/LEXIQUE/ASM/DICTIONN.HTM
+
+Registre
+https://www.gladir.com/CODER/ASM8086/registre.htm
