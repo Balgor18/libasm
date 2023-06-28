@@ -1,9 +1,8 @@
-;
 ;     size_t     strlen(const char *s);
 ;     - s is store inside the register [RDI]
 ;
 ;    [RAX] is the data i return
-;
+
 global _ft_strlen
 
 _ft_strlen:
