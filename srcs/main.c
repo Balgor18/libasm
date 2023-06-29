@@ -5,7 +5,7 @@
 # define BUFFER_SIZE 15
 # define LEN(x) printf("%s = %ld | real (%ld)\n", x, ft_strlen(x), strlen(x));
 # define WRITE(x, str, len) printf("%s = %ld | real (%ld)\n", str, ft_write(x, str, len), write(x, str, len));
-# define STRCMP(s1, s2) printf("%s\n%s\nme = %d | real = %d\n", s1, s2, ft_strcmp(s1, s2), strcmp(s1, s2));
+// # define 
 
 void	test_strlen()
 {
@@ -69,9 +69,6 @@ int main(void){
 	char src[100] = "World\0";
 	test_strcpy(dest, src);
 
-	printf(STOP_BAR"Test strcmp\n");
-	STRCMP("Kekw", "Kekz");
-	STRCMP("Abcdeg", "Abcdef");
-	STRCMP("Salut", "Salut1");
+
 	return EXIT_SUCCESS;
 }
