@@ -1,11 +1,13 @@
+bits 64
+
 ;	int		strcmp(const char *s1, const char *s2);
 ;	- s1 is store inside the register [RDI]
 ;	- s2 is store inside the register [RSI]
 
 
-global _ft_strcmp
+global ft_strcmp
 
-_ft_strcmp:
+ft_strcmp:
 	cmp		byte [rdi], 0
 	je		check_s2
 	cmp		byte [rsi], 0

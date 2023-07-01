@@ -16,3 +16,5 @@ https://www.gladir.com/LEXIQUE/ASM/DICTIONN.HTM
 
 Registre
 https://www.gladir.com/CODER/ASM8086/registre.htm
+
+https://stackoverflow.com/questions/36007975/compile-error-relocation-r-x86-64-pc32-against-undefined-symbol/41322328#41322328

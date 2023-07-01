@@ -1,11 +1,13 @@
+bits 64
+
 ;     size_t     strlen(const char *s);
 ;     - s is store inside the register [RDI]
 ;
 ;    [RAX] is the data i return
 
-global _ft_strlen
+global ft_strlen
 
-_ft_strlen:
+ft_strlen:
     xor		rax, rax
     jmp     check
     call    leave
