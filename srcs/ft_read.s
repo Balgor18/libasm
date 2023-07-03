@@ -6,12 +6,12 @@ bits 64
 ;    - nbyte is store inside the register [RDX]
 
 %define MACH_SYSCALL(nb)   0x2000000 | nb ; Use for mac os
-%define READ 3
+%define READ 0
 
 global ft_read
 
 ft_read:
-	mov		rax, MACH_SYSCALL(READ) ; Check for a linux system
+	mov		rax, READ ; Check for a linux system
 	mov		rbx, rdx
 	syscall
 	cmp		rax, 0

@@ -9,10 +9,19 @@ extern ft_strcpy
 extern malloc
 
 ft_strdup:
+	push rdi
 	call ft_strlen
-	mov rdi, rsi
-	mov rax, rdi
-	call malloc
-	mov rax, rdi
+	inc rax
+	mov rdi, rax; 
+	call malloc wrt ..plt
+	cmp	rax, 0
+	jz	error
+	pop rcx
+	mov rdi, rax;
+	mov rsi, rcx
 	jmp ft_strcpy
+	ret
+
+error:
+	mov		rax, -1
 	ret

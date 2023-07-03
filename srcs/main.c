@@ -80,9 +80,10 @@ int main(void){
 	printf(STOP_BAR"Test strcmp\n");
 	test_strcmp();
 
-	printf(STOP_BAR"Test strdupmp\n");
+	printf(STOP_BAR"Test strdup\n");
 	char *test2 = "Yolo everyone";
 	char *test = ft_strdup(test2);
 	STRDUP(test, test2)
+	free(test);
 	return EXIT_SUCCESS;
 }

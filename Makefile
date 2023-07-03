@@ -6,7 +6,7 @@ INC_DIR		=	includes
 SRC_DIR		=	$(shell find srcs -type d)
 
 CXX	= clang
-CXXFLAGS = -Wall -Wextra -Werror -fPIE
+CXXFLAGS = -Wall -Wextra -Werror
 
 ifeq ($(DEBUG), 1)
 	CXXFLAGS += -g3
@@ -53,7 +53,7 @@ $(OBJ_DIR) :
 	@mkdir -p $@
 
 ${NAME_T} : $(NAME) ${OBJS_TEST}
-	$(CXX) ${CXXFLAGS} ${OBJS_TEST} -I${INC_DIR} -o $(NAME_T) -L. -lasm
+	$(CXX) ${CXXFLAGS} ${OBJS_TEST} -I${INC_DIR} -o $(NAME_T) -L. -lasm -fPIC -pie
 
 clean:
 	rm -rf $(OBJ_DIR)

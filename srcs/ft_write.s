@@ -6,12 +6,12 @@ bits 64
 ;    - byte is store inside the register [RDX]
 
 %define MACH_SYSCALL(nb)   0x2000000 | nb ; Use for mac os
-%define WRITE 4
+%define WRITE 1
 
-global _ft_write
+global ft_write
 
-_ft_write:
-	mov		rax, MACH_SYSCALL(WRITE); Check for a linux system
+ft_write:
+	mov		rax, WRITE; Check for a linux system
 	mov		rbx, rdx
 	syscall
 	cmp		rax, 0
