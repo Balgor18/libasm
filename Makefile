@@ -15,7 +15,9 @@ OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.s=%.o))
 SRCS =	ft_strlen.s \
 		ft_write.s \
 		ft_read.s  \
-		ft_strcpy.s
+		ft_strcpy.s  \
+		ft_strcmp.s  \
+		ft_strdup.s
 
 SRC_TEST = main.c
 OBJS_TEST = $(addprefix $(OBJ_DIR)/, $(SRC_TEST:%.c=%.o))
@@ -23,13 +25,13 @@ OBJS_TEST = $(addprefix $(OBJ_DIR)/, $(SRC_TEST:%.c=%.o))
 vpath %.s $(foreach dir, $(SRC_DIR), $(dir):)
 vpath %.c $(foreach dir, $(SRC_DIR), $(dir):)
 
-ifeq ($(shell UNAME), Darwin)
-	CMD_AS = nasm
-	FLAG_AS = -f macho64 -DDARWIN
+CMD_AS = nasm
+FLAG_AS = -f elf64
+ifeq ($(shell uname), Darwin)
+	FLAG_AS += -DDARWIN
 	FLAGS = -macosx_version_min 10.8 -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -lSystem
 else
-	CMD_AS = as
-	FLAG_AS = 
+
 endif
 
 
@@ -51,7 +53,7 @@ $(OBJ_DIR) :
 	@mkdir -p $@
 
 ${NAME_T} : $(NAME) ${OBJS_TEST}
-	$(CXX) ${CXXFLAGS} -L. -lasm ${OBJS_TEST} -I${INC_DIR} -o $(NAME_T)
+	$(CXX) ${CXXFLAGS} ${OBJS_TEST} -I${INC_DIR} -o $(NAME_T) -L. -lasm -fPIC -pie
 
 clean:
 	rm -rf $(OBJ_DIR)
