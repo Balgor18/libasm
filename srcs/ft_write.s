@@ -5,9 +5,6 @@ bits 64
 ;    - buf is store inside the register [RSI]
 ;    - byte is store inside the register [RDX]
 
-%define MACH_SYSCALL(nb)   0x2000000 | nb ; Use for mac os
-%define WRITE 1
-
 global ft_write
 
 ft_write:
