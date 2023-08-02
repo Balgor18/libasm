@@ -4,9 +4,7 @@ bits 64
 ;	- s1 is store inside the register [RDI]
 
 global ft_strdup
-extern ft_strlen
-extern ft_strcpy
-extern malloc
+extern ft_strlen, ft_strcpy, malloc, __errno_location
 
 ft_strdup:
 	push rdi
@@ -23,5 +21,9 @@ ft_strdup:
 	ret
 
 error:
-	mov		rax, -1
+	neg		rax
+	mov		rdi, rax
+	call	__errno_location wrt ..plt
+	mov		rax, rdi
+	mov		rax, 0
 	ret

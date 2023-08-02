@@ -23,11 +23,12 @@ void	test_write()
 	WRITE(1, "Hey", strlen("Hey"));
 	WRITE(1, "", strlen(""));
 	WRITE(2, "Kekw", strlen("kekw"));
+	WRITE(127, "Kekw", strlen("kekw"));
 }
 
 bool	test_read(char *filename)
 {
-		int fd = open(filename, O_RDONLY);
+	int fd = open(filename, O_RDONLY);
 	if (fd == -1){
 		dprintf(2, "File not found\n");
 		return false;
