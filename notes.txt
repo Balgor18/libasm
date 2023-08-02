@@ -18,3 +18,7 @@ Registre
 https://www.gladir.com/CODER/ASM8086/registre.htm
 
 https://stackoverflow.com/questions/36007975/compile-error-relocation-r-x86-64-pc32-against-undefined-symbol/41322328#41322328
+
+https://stackoverflow.com/questions/62046052/how-to-change-errno-value-in-asm-x64
+
+https://www.cs.fsu.edu/~langley/CNT5605/2017-Summer/assembly-example/assembly.html
