@@ -5,9 +5,6 @@ bits 64
 ;    - buf is store inside the register [RSI]
 ;    - nbyte is store inside the register [RDX]
 
-%define MACH_SYSCALL(nb)   0x2000000 | nb ; Use for mac os
-%define READ 0
-
 global ft_read
 extern	__errno_location
 

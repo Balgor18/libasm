@@ -4,7 +4,6 @@ bits 64
 ;	- s1 is store inside the register [RDI]
 ;	- s2 is store inside the register [RSI]
 
-
 global ft_strcmp
 
 ft_strcmp:
