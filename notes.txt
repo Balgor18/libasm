@@ -24,3 +24,5 @@ https://stackoverflow.com/questions/62046052/how-to-change-errno-value-in-asm-x6
 https://www.cs.fsu.edu/~langley/CNT5605/2017-Summer/assembly-example/assembly.html
 
 https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+
+https://syscalls32.paolostivanin.com/
