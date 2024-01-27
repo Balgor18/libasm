@@ -9,7 +9,7 @@ global ft_write
 extern __errno_location
 
 ft_write:
-	mov		rax, WRITE; Check for a linux system
+	mov		rax, 4; Check for a linux system
 	mov		rbx, rdx
 	syscall
 	cmp		rax, 0
