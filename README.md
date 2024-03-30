@@ -1,5 +1,6 @@
 # Libasm
 
+THis project is finish **BUT** not working some error appears on linux and probably on mac.
 
 ## Useful link
 
